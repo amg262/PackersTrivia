@@ -1,6 +1,6 @@
 # PackerQuiz Pro
 
-Welcome to PackerQuiz Pro, the ultimate trivia application for Green Bay Packers fans! Test your knowledge of Packers history, players, stats, and more in this engaging and challenging quiz game.
+![image](/packers.png) Welcome to PackerQuiz Pro, the ultimate trivia application for Green Bay Packers fans! Test your knowledge of Packers history, players, stats, and more in this engaging and challenging quiz game.
 
 ## Features
 
