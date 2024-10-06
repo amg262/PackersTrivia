@@ -6,3 +6,5 @@ riderModule.iml
 /.idea/
 /.vs/
 *.suo
+
+web-scraper/.idea/
