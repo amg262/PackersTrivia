@@ -32,28 +32,28 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - /var/lib/postresql/data
+      - postgres_data:/var/lib/postresql/data
     networks:
       custom:
   
-  mssql:
-    container_name: mssql-packers-trivia-db
-    hostname: mssql-db
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      ACCEPT_EULA: 'Y'
-      MSSQL_SA_PASSWORD: 'Admin123!'
-      MSSQL_DATA_DIR: /var/opt/mssql/data
-      MSSQL_PID: 'Developer'
-      MSSQL_TCP_PORT: 1433
-    ports:
-      - "1433:1433"
-    volumes:
-      - mssql_data:/var/lib/mssql/data
-      - /var/lib/mssql/log
-      - /var/lib/mssql/secrets
-    networks:
-      custom:
+  #  mssql:
+  #    container_name: mssql-packers-trivia-db
+  #    hostname: mssql-db
+  #    image: mcr.microsoft.com/mssql/server:2022-latest
+  #    environment:
+  #      ACCEPT_EULA: 'Y'
+  #      MSSQL_SA_PASSWORD: 'Admin123!'
+  #      MSSQL_DATA_DIR: /var/opt/mssql/data
+  #      MSSQL_PID: 'Developer'
+  #      MSSQL_TCP_PORT: 1433
+  #    ports:
+  #      - "1433:1433"
+  #    volumes:
+  #      - mssql_data:/var/lib/mssql/data
+  #      - /var/lib/mssql/log
+  #      - /var/lib/mssql/secrets
+  #    networks:
+  #      custom:
   #    healthcheck:
   #      test: [ "CMD-SHELL", "sqlcmd -S localhost -U sa -P Admin123! -Q 'SELECT 1'" ]
   #      interval: 10s
@@ -82,5 +82,7 @@ services:
 #    networks:
 #      custom:
 volumes:
-  mssql_data:
+  postgres_data:
     driver: local
+#  mssql_data:
+#    driver: local
